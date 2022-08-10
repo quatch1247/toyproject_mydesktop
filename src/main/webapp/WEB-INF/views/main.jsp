@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR" isELIgnored="false"%> 
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="path" value="${pageContext.request.contextPath}" />
 
@@ -348,7 +347,8 @@
         <div class="row" data-aos="fade-up" data-aos-delay="100">
          
           <!-- ======= 윈도우 ======= -->
-            <form action="batteryreport" method="post" role="form" class="php-email-form">
+            <form id="batteryreport" method="post" class="php-email-form"
+            action = "${path}/batteryreport">
               <div class="row">
               </div>
               
@@ -362,7 +362,10 @@
                 <div class="error-message"></div>
                 
               </div>
-              <div class="text-center"><button type="submit">배터리 정보 확인 (윈도우)</button></div>
+              <div class="text-center">              
+              <button type="submit">배터리 정보 확인 (윈도우)
+              </button>
+              </div>
             </form>
             
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">

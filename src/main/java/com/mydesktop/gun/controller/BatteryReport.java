@@ -18,6 +18,8 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -26,7 +28,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 //배터리 정보
 @RequestMapping(value = "/batteryreport", method = {RequestMethod.GET, RequestMethod.POST })
 public class BatteryReport {
+	
+	public static final Logger LOG = LoggerFactory.getLogger(BatteryReport.class);
 	public String main() throws IOException {
+		
+		LOG.info("배터리 확인중");
 		
 	//cmd접속
 	String cmdCommand = "cmd /c";
@@ -182,7 +188,8 @@ public class BatteryReport {
 		}
 
 		batteryReportHTML.delete();
-		return "redirect:/main";
+		
+		return "redirect:/main1";
 	}
 
 	public static int evaluate(String input) {
