@@ -17,6 +17,13 @@ local.properties
 .project
 .settings
 
+### Eclipse Patch ###
+# Eclipse Core
+.project
+
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
+
 # External tool builders
 .externalToolBuilders/
 
@@ -72,7 +79,7 @@ local.properties
 
 ### Java ###
 # Compiled class file
-*.class
+*.class 
 
 # Log file
 *.log
