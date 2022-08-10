@@ -1,17 +1,27 @@
 # toyproject_mydesktop
-데스크탑 정보 웹페이지
+##데스크탑 정보 웹페이지
 
 readme 업뎃 예정
+
 
 깃 파일 잘못올렸을때
 
 원격저장소 파일제거
+
 $ git rm --cached .classpath
+
 $ git rm --cached .settings
+
 $ git rm --cached -r .settings
 
+
+
+
+
 후에 깃 커밋 & 푸시
+
 $ git commit - m "Fixed untracked files"
+
 $ git push
 
 gitignore에 변경 사항 추가
